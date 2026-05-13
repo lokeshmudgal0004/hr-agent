@@ -528,6 +528,10 @@ The project evolved from a simple resume parser into a scalable AI-assisted hiri
 
 ---
 
+## SS
+<img width="1799" height="1350" alt="Screenshot 2026-05-13 113041" src="https://github.com/user-attachments/assets/9956c6ce-041b-405d-af7a-fd546329ea51" />
+
+
 # Author
 
 ## Lokesh Mudgal
