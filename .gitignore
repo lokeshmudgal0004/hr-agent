@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# Environment Variables
+.env
+
+# Outputs
+output/
+
+# Uploads
+uploads/
+
+# Vector DB
+vector_db/
+
+# OS Files
+.DS_Store
+Thumbs.db

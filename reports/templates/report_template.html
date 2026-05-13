@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        color: #222;
+      }
+
+      h1 {
+        color: #0f172a;
+      }
+
+      h2 {
+        margin-top: 30px;
+        color: #1e293b;
+      }
+
+      .candidate-card {
+        border: 1px solid #d1d5db;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .score {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+
+      .recommendation {
+        font-weight: bold;
+        color: green;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+
+      th,
+      td {
+        border: 1px solid #d1d5db;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background: #f3f4f6;
+      }
+
+      ul {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AI Hiring Shortlist Report</h1>
+
+    <p><strong>Role:</strong> {{ role }}</p>
+
+    <p><strong>Generated At:</strong> {{ generated_at }}</p>
+
+    {% for candidate in candidates %}
+
+    <div class="candidate-card">
+      <h2>Rank #{{ loop.index }} — {{ candidate.candidate_name }}</h2>
+
+      <p class="score">Weighted Score: {{ candidate.weighted_total }}/10</p>
+
+      <p class="recommendation">
+        Recommendation: {{ candidate.recommendation }}
+      </p>
+
+      <h3>Rubric Breakdown</h3>
+
+      <table>
+        <tr>
+          <th>Dimension</th>
+          <th>Score</th>
+          <th>Justification</th>
+        </tr>
+
+        {% for key, value in candidate.scores.items() %}
+
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ value.score }}</td>
+          <td>{{ value.justification }}</td>
+        </tr>
+
+        {% endfor %}
+      </table>
+
+      <h3>Missing Skills</h3>
+
+      <ul>
+        {% for skill in candidate.missing_skills %}
+
+        <li>{{ skill }}</li>
+
+        {% endfor %}
+      </ul>
+
+      <h3>Strengths</h3>
+
+      <ul>
+        {% for strength in candidate.strengths %}
+
+        <li>{{ strength }}</li>
+
+        {% endfor %}
+      </ul>
+
+      <h3>Weaknesses</h3>
+
+      <ul>
+        {% for weakness in candidate.weaknesses %}
+
+        <li>{{ weakness }}</li>
+
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% endfor %}
+  </body>
+</html>
