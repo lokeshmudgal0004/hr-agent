@@ -4,6 +4,12 @@ AI-Powered Hybrid Resume Screening & Candidate Ranking System
 
 ---
 
+# Demo Video Link
+
+https://youtu.be/FajVAzzGipY
+
+---
+
 # Overview
 
 The HR Resume & LinkedIn Shortlisting Agent is an AI-powered hiring assistant designed to automate the initial screening, semantic matching, and ranking of candidates using:
@@ -55,11 +61,13 @@ instead of relying only on keyword matching.
 Combines:
 
 ### Deterministic Semantic Retrieval
+
 using embeddings and vector search
 
 with
 
 ### LLM-based Reasoning
+
 for explainable candidate evaluation.
 
 ---
@@ -377,13 +385,13 @@ instead of hardcoded source files.
 
 # Hybrid Rubric Scoring System
 
-| Category | Weight |
-|---|---|
-| Skills Match | 30% |
-| Experience Relevance | 25% |
-| Education & Certifications | 15% |
-| Project Portfolio | 20% |
-| Communication Quality | 10% |
+| Category                   | Weight |
+| -------------------------- | ------ |
+| Skills Match               | 30%    |
+| Experience Relevance       | 25%    |
+| Education & Certifications | 15%    |
+| Project Portfolio          | 20%    |
+| Communication Quality      | 10%    |
 
 ---
 
@@ -529,8 +537,8 @@ The project evolved from a simple resume parser into a scalable AI-assisted hiri
 ---
 
 ## SS
-<img width="1799" height="1350" alt="Screenshot 2026-05-13 113041" src="https://github.com/user-attachments/assets/9956c6ce-041b-405d-af7a-fd546329ea51" />
 
+<img width="1799" height="1350" alt="Screenshot 2026-05-13 113041" src="https://github.com/user-attachments/assets/9956c6ce-041b-405d-af7a-fd546329ea51" />
 
 # Author
 
