@@ -1,0 +1,511 @@
+[
+    {
+        "candidate_name": "Tanish",
+        "candidate_email": "tanishsharma1906@gmail.com",
+        "current_role": "",
+        "domain": "Artificial Intelligence and Machine Learning",
+        "candidate_skills": [
+            "Supervised Learning",
+            "Deep Learning",
+            "Generative AI",
+            "Feature Engineering",
+            "Model Evaluation",
+            "Computer Vision",
+            "Image Preprocessing",
+            "YOLO",
+            "PaddleOCR",
+            "Object Detection",
+            "Random Forest",
+            "XGBoost",
+            "LSTM",
+            "Data Augmentation",
+            "Class Imbalance Handling",
+            "False Positive Rate",
+            "Threshold Optimization",
+            "PCA",
+            "Streamlit",
+            "Fuzzy Logic",
+            "pandas",
+            "NumPy",
+            "Matplotlib",
+            "SQL (MySQL)",
+            "JavaScript",
+            "HTML/CSS",
+            "Git",
+            "VS Code",
+            "Visual Studio",
+            "Jupyter Lab",
+            "Google Colab",
+            "Operating Systems",
+            "Object Oriented Programming",
+            "DBMS",
+            "Distributed Computing"
+        ],
+        "top_skills": [
+            "Supervised Learning",
+            "Deep Learning",
+            "Generative AI",
+            "Feature Engineering",
+            "Model Evaluation",
+            "Computer Vision",
+            "Image Preprocessing",
+            "YOLO"
+        ],
+        "projects": [
+            {
+                "title": "3D Lung Tumor Detection using Deep Learning and Generative AI",
+                "description": "Designed a 3D medical imaging pipeline for automated lung tumor detection from CT scans. Processed volumetric CT scan data into structured 3D segmented slices for supervised learning. Implemented Generative AI-based data augmentation to address class imbalance and improve model generalization. Trained convolutional deep learning models for tumor detection on augmented 3D medical imaging dataset. Evaluated model performance using Accuracy, Precision, Recall, F1-Score, and confusion matrix analysis.",
+                "technologies": [
+                    "Deep Learning",
+                    "Generative AI",
+                    "Data Augmentation",
+                    "Class Imbalance Handling",
+                    "Convolutional Deep Learning Models",
+                    "3D Medical Imaging",
+                    "Supervised Learning"
+                ]
+            },
+            {
+                "title": "Multimodal DDoS Attack Detection using ML and Deep Learning",
+                "description": "Developed a hybrid Intrusion Detection System (IDS) for real-time DDoS attack classification. Processed CICIDS2017 and CICDDoS2019 datasets for binary and multi-class attack detection. Engineered statistical and temporal traffic features including flow duration, packet/byte rate, and TCP flag metrics. Designed multimodal architecture combining Random Forest and XGBoost with LSTM for enhanced pattern learning. Applied feature scaling, dimensionality reduction (PCA), and class imbalance handling (SMOTE) to improve generalization. Reduced False Positive Rate (FPR) via threshold optimization while maintaining high Recall and ROC-AUC.",
+                "technologies": [
+                    "ML",
+                    "Deep Learning",
+                    "Random Forest",
+                    "XGBoost",
+                    "LSTM",
+                    "Feature Scaling",
+                    "Dimensionality Reduction",
+                    "Class Imbalance Handling",
+                    "False Positive Rate",
+                    "Threshold Optimization",
+                    "PCA",
+                    "SMOTE"
+                ]
+            },
+            {
+                "title": "Automatic License Plate Recognition using YOLO and OCR",
+                "description": "Developed an end-to-end deep learning pipeline for real-time license plate detection and text extraction. Built a two-stage system using YOLO (Ultralytics) for license plate detection and PaddleOCR for text recognition. Implemented detection \u2192 plate cropping \u2192 OCR pipeline with preprocessing (grayscale conversion, image upscaling). Applied transfer learning, layer freezing, and fine-tuning to improve mAP and convergence speed. Trained on custom YOLO-format dataset in Google Colab with automated data.yaml configuration. Evaluated performance using mAP@50, Precision, and Recall; exported inference-ready model weights.",
+                "technologies": [
+                    "YOLO",
+                    "PaddleOCR",
+                    "Transfer Learning",
+                    "Layer Freezing",
+                    "Fine-Tuning",
+                    "mAP",
+                    "mAP@50",
+                    "Precision",
+                    "Recall",
+                    "Data Preprocessing",
+                    "Grayscale Conversion",
+                    "Image Upscaling"
+                ]
+            },
+            {
+                "title": "Fuzzy Water Quality Checker",
+                "description": "Developed a fuzzy logic-based system to compute WQI from environmental parameters. Built using Python and Streamlit for interactive web UI. Designed fuzzy membership functions for pH, DO, BOD, Nitrate, and Temperature. Applied fuzzy inference rules to classify water into Poor, Moderate, and Good. Deployed app on Streamlit Cloud using GitHub integration.",
+                "technologies": [
+                    "Fuzzy Logic",
+                    "Python",
+                    "Streamlit",
+                    "GitHub"
+                ]
+            }
+        ],
+        "experiences": [],
+        "education": [
+            {
+                "institution": "National Institute Of Technology, Kurukshetra",
+                "degree": "B.Tech",
+                "field": "Artificial Intelligence and Machine Learning",
+                "year": "Till 5th Semester"
+            },
+            {
+                "institution": "MLS DAV Public School, Narnaul, Haryana",
+                "degree": "12th Grade",
+                "field": "",
+                "year": "2023"
+            },
+            {
+                "institution": "MLS DAV Public School, Narnaul, Haryana",
+                "degree": "10th Grade",
+                "field": "",
+                "year": "2021"
+            }
+        ],
+        "certifications": [],
+        "missing_skills": [
+            "modern AI tools",
+            "frameworks",
+            "technology stacks",
+            "LLMs",
+            "generative AI platforms",
+            "AI/ML frameworks",
+            "programming language - Python",
+            "REST APIs",
+            "software integration concepts",
+            "databases",
+            "data structures",
+            "cloud infrastructure - AWS",
+            "cloud infrastructure - Azure",
+            "cloud infrastructure - GCP"
+        ],
+        "scores": {
+            "skills_match": {
+                "score": 4.2,
+                "semantic_similarity": 0.5432895633994923,
+                "justification": "The candidate has a strong background in machine learning and deep learning, including supervised learning, deep learning, generative AI, and various algorithms. However, the candidate lacks specific skills in modern AI tools, frameworks, and technology stacks such as LLMs, generative AI platforms, and AI/ML frameworks like TensorFlow or PyTorch. Additionally, the candidate's knowledge of cloud infrastructure (AWS, Azure, GCP) is not mentioned, which is a significant gap in the required skills."
+            },
+            "experience_relevance": {
+                "score": 3.2,
+                "semantic_similarity": 0.05661574346668764,
+                "justification": "The candidate has experience in some areas relevant to the job requirements, such as AI feature prototyping and live project execution. However, there are gaps in other critical areas like strategic AI planning, software integration support, prompt engineering, and data validation. The alignment is moderate due to the partial coverage of the job requirements."
+            },
+            "education_certs": {
+                "score": 0,
+                "justification": "Education and certifications evaluated."
+            },
+            "project_portfolio": {
+                "score": 5.0,
+                "semantic_similarity": 0.2389557804170177,
+                "justification": "The candidate's project portfolio demonstrates strong alignment with the job requirements, particularly in the areas of deep learning, generative AI, and cloud infrastructure. However, the projects do not fully cover all the specified technologies and frameworks, such as REST APIs and software integration concepts, which slightly reduces the score."
+            },
+            "communication_quality": {
+                "score": 6.0,
+                "justification": "The candidate's resume provides a clear and structured overview of their education and projects, which is relevant to the job requirement. However, the communication quality could be improved with more concise and professional language, and a more polished format. The alignment is moderate due to the presence of informal elements like hashtags and symbols."
+            }
+        },
+        "weighted_total": 3.66,
+        "recommendation": "Reject",
+        "fit_label": "Weak Fit"
+    },
+    {
+        "candidate_name": "Lokesh Mudgal",
+        "candidate_email": "luvkushmudgal@gmail.com",
+        "current_role": "AI & Full Stack Developer",
+        "domain": "AI, Full Stack Development, Deep Learning, Computer Vision, Blockchain",
+        "candidate_skills": [
+            "C++",
+            "Python",
+            "JavaScript",
+            "SQL",
+            "Solidity",
+            "React.js",
+            "Redux",
+            "Node.js",
+            "Next.js",
+            "Express.js",
+            "FastAPI",
+            "CNN",
+            "RNN",
+            "LSTM",
+            "YOLO",
+            "PaddleOCR",
+            "Generative AI",
+            "Git",
+            "MongoDB",
+            "Hardhat",
+            "Cloudinary",
+            "Google Colab",
+            "Jupyter",
+            "DBMS",
+            "OOPs",
+            "Operating Systems",
+            "Computer Networks",
+            "Distributed Systems",
+            "LangChain",
+            "FAISS",
+            "Vector Databases",
+            "Hugging Face Transformers",
+            "Pydantic",
+            "Groq API",
+            "System Designing",
+            "Design Principles",
+            "Singleton",
+            "Observer",
+            "Decorator Designing Patterns"
+        ],
+        "top_skills": [
+            "C++",
+            "Python",
+            "JavaScript",
+            "SQL",
+            "Solidity",
+            "React.js",
+            "Redux",
+            "Node.js"
+        ],
+        "projects": [
+            {
+                "title": "3D Lung Tumor Detection using Deep Learning and Generative AI",
+                "description": "Designed a 3D medical imaging pipeline for automated lung tumor detection from CT scans. Implemented Generative AI-based augmentation to improve model generalization. Evaluated performance using Accuracy, Precision, Recall, and F1-score metrics.",
+                "technologies": [
+                    "Python",
+                    "CNN",
+                    "Generative AI",
+                    "Medical Imaging"
+                ]
+            },
+            {
+                "title": "HR Resume & LinkedIn Shortlisting Agent",
+                "description": "Built an AI-powered ATS-style hiring assistant for semantic resume screening and candidate ranking. Implemented hybrid scoring using Sentence Transformers, FAISS vector search, and LLM-based reasoning. Developed automated PDF/HTML/JSON report generation with explainable candidate evaluation.",
+                "technologies": [
+                    "Python",
+                    "FAISS",
+                    "LangChain",
+                    "Groq API"
+                ]
+            },
+            {
+                "title": "Collectibles",
+                "description": "Developed a blockchain-based NFT marketplace for secure buying and selling of digital collectibles. Implemented Solidity smart contracts for minting, ownership transfer, and transaction validation. Integrated escrow-style payment handling to improve transaction trust and security. Built a responsive React frontend with dynamic NFT rendering and wallet interaction.",
+                "technologies": [
+                    "React.js",
+                    "Solidity",
+                    "Hardhat",
+                    "ethers.js"
+                ]
+            },
+            {
+                "title": "Attendance Manager",
+                "description": "Built a full-stack attendance management platform with secure JWT authentication. Integrated Cloudinary and Multer for image uploads and storage handling. Designed protected API routes with role-based authentication.",
+                "technologies": [
+                    "MERN Stack",
+                    "JWT",
+                    "Cloudinary"
+                ]
+            }
+        ],
+        "experiences": [
+            {
+                "company": "N/A",
+                "role": "3D Lung Tumor Detection using Deep Learning and Generative AI",
+                "duration": "Feb 2026 \u2013 Present",
+                "description": "Designed a 3D medical imaging pipeline for automated lung tumor detection from CT scans. Implemented Generative AI-based augmentation to improve model generalization. Evaluated performance using Accuracy, Precision, Recall, and F1-score metrics."
+            },
+            {
+                "company": "N/A",
+                "role": "HR Resume & LinkedIn Shortlisting Agent",
+                "duration": "May 2025 \u2013 Present",
+                "description": "Built an AI-powered ATS-style hiring assistant for semantic resume screening and candidate ranking. Implemented hybrid scoring using Sentence Transformers, FAISS vector search, and LLM-based reasoning. Developed automated PDF/HTML/JSON report generation with explainable candidate evaluation."
+            },
+            {
+                "company": "N/A",
+                "role": "Collectibles",
+                "duration": "Aug 2025",
+                "description": "Developed a blockchain-based NFT marketplace for secure buying and selling of digital collectibles. Implemented Solidity smart contracts for minting, ownership transfer, and transaction validation. Integrated escrow-style payment handling to improve transaction trust and security. Built a responsive React frontend with dynamic NFT rendering and wallet interaction."
+            },
+            {
+                "company": "N/A",
+                "role": "Attendance Manager",
+                "duration": "Feb 2025 \u2013 Mar 2025",
+                "description": "Built a full-stack attendance management platform with secure JWT authentication. Integrated Cloudinary and Multer for image uploads and storage handling. Designed protected API routes with role-based authentication."
+            }
+        ],
+        "education": [
+            {
+                "institution": "National Institute of Technology, Kurukshetra",
+                "degree": "B.Tech",
+                "field": "Artificial Intelligence and Machine Learning",
+                "year": "2023 \u2013 2027"
+            }
+        ],
+        "certifications": [
+            "Cisco Networking Academy \u2013 Cybersecurity",
+            "HackerRank SQL Advanced Certificate"
+        ],
+        "missing_skills": [
+            "modern AI tools",
+            "frameworks",
+            "technology stacks",
+            "LLMs",
+            "generative AI platforms",
+            "AI/ML frameworks",
+            "programming language - Python",
+            "REST APIs",
+            "software integration concepts",
+            "databases",
+            "data structures",
+            "cloud infrastructure - AWS",
+            "cloud infrastructure - Azure",
+            "cloud infrastructure - GCP"
+        ],
+        "scores": {
+            "skills_match": {
+                "score": 2.6,
+                "semantic_similarity": 0.43929582814364476,
+                "justification": "The candidate has a moderate alignment with the job requirements. They have skills in Python, SQL, and some cloud infrastructure (AWS, Google Colab, Jupyter), which are relevant. However, they lack skills in modern AI tools, frameworks, and specific technologies like LLMs, generative AI platforms, and AI/ML frameworks mentioned in the job requirement."
+            },
+            "experience_relevance": {
+                "score": 3.5,
+                "semantic_similarity": 0.20652176344308323,
+                "justification": "The candidate's experience in AI feature prototyping and live project execution is strong, particularly in the areas of deep learning, generative AI, and performance evaluation. However, the experience in software integration, prompt engineering, and data preparation is less directly aligned with the job requirements."
+            },
+            "education_certs": {
+                "score": 0,
+                "justification": "Education and certifications evaluated."
+            },
+            "project_portfolio": {
+                "score": 4.5,
+                "semantic_similarity": 0.34839157969904133,
+                "justification": "The candidate has demonstrated strong alignment with the project portfolio by showcasing experience in deep learning and generative AI for medical imaging. However, the other projects, while technically impressive, do not directly align with the specific requirements of modern AI tools, frameworks, and technology stacks in the context of AI/ML for medical applications."
+            },
+            "communication_quality": {
+                "score": 8.0,
+                "justification": "The resume provides a clear and detailed summary of Lokesh Mudgal's professional background, skills, and achievements. It is well-organized and easy to read, making it suitable for a professional setting. However, it could be more concise and focused on the most relevant information for the position."
+            }
+        },
+        "weighted_total": 3.36,
+        "recommendation": "Reject",
+        "fit_label": "Weak Fit"
+    },
+    {
+        "candidate_name": "SWAMIL SUBODH",
+        "candidate_email": "",
+        "current_role": "Bachelor of Technology in Artificial Intelligence and Machine Learning at National Institute of Technology, Kurukshetra, India",
+        "domain": "Artificial Intelligence and Machine Learning",
+        "candidate_skills": [
+            "Python",
+            "Java",
+            "C/C++",
+            "Dart",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Machine Learning",
+            "Deep Learning",
+            "NLP",
+            "Computer Vision",
+            "DSA",
+            "Object-Oriented Programming",
+            "Neural Networks",
+            "Git",
+            "VS Code",
+            "PyCharm",
+            "IntelliJ IDEA",
+            "Raspberry Pi",
+            "ESP32"
+        ],
+        "top_skills": [
+            "Python",
+            "Java",
+            "C/C++",
+            "Dart",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Machine Learning"
+        ],
+        "projects": [
+            {
+                "title": "Ethereum Phishing Scam Detection Using Hybrid Graph Neural Networks (DA-HGNN)",
+                "description": "Built a hybrid deep learning architecture combining Conv1D, GRU with Multi-Head Attention, and SAGEConv GNN, using Graph Autoencoder (GAE) with 11-dimensional node feature vectors to learn both temporal and structural node embeddings. Applied sliding window-based data augmentation to resolve class imbalance across 348K+ transaction records, balancing phishing vs. benign node samples for robust model training. Achieved 99.4% AUC-ROC, 99.5% Recall, and 99.4% F1-score on real-world Ethereum datasets, outperforming LSTM, GCN, GAT, and LightGBM baselines; validated through ablation studies and sensitivity analysis.",
+                "technologies": [
+                    "PyTorch",
+                    "Graph Neural Network",
+                    "GRU",
+                    "Conv1D",
+                    "Blockchain",
+                    "Python"
+                ]
+            },
+            {
+                "title": "The Donna Device",
+                "description": "Designed and developed a smart voice-enabled assistant using Raspberry Pi with speech recognition and synthesis for hands-free, personality-driven interaction. Implemented NLP-based command processing for contextual responses and integrated ESP32 for Wi-Fi connectivity to enable real-time information retrieval.",
+                "technologies": [
+                    "Raspberry Pi",
+                    "ESP32",
+                    "NLP",
+                    "Python",
+                    "Speech Recognition & Synthesis"
+                ]
+            },
+            {
+                "title": "ByteSized \u2014 Weekly Tech Digest Newsletter",
+                "description": "Designed and developed a web-based weekly tech newsletter delivering curated AI, startups, dev tools, and gadgets news \u2014 achieving 68% open rate and 5-minute read time. Built a responsive subscription landing page with email collection and archive system, amassing 15 subscribers with zero-spam policy and single-click unsubscribe.",
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Email Automation"
+                ]
+            }
+        ],
+        "experiences": [
+            {
+                "company": "",
+                "role": "",
+                "duration": "2023 \u2013 Present",
+                "description": "Bachelor of Technology in Artificial Intelligence and Machine Learning at National Institute of Technology, Kurukshetra, India"
+            },
+            {
+                "company": "Delhi Public School, Bokaro",
+                "role": "",
+                "duration": "2021 \u2013 2023",
+                "description": "Senior Secondary (Science) \u2014 Scored: 91%"
+            }
+        ],
+        "education": [
+            {
+                "institution": "National Institute of Technology, Kurukshetra",
+                "degree": "Bachelor of Technology",
+                "field": "Artificial Intelligence and Machine Learning",
+                "year": "2023 \u2013 Present"
+            },
+            {
+                "institution": "Delhi Public School, Bokaro",
+                "degree": "",
+                "field": "",
+                "year": "2021 \u2013 2023"
+            }
+        ],
+        "certifications": [
+            "Valkyrie MUN (Indian Press) \u2014 Special Mention",
+            "Muneoux MUN \u2014 High Commendation"
+        ],
+        "missing_skills": [
+            "modern AI tools",
+            "frameworks",
+            "technology stacks",
+            "LLMs",
+            "generative AI platforms",
+            "AI/ML frameworks",
+            "programming language - Python",
+            "REST APIs",
+            "software integration concepts",
+            "databases",
+            "data structures",
+            "cloud infrastructure - AWS",
+            "cloud infrastructure - Azure",
+            "cloud infrastructure - GCP"
+        ],
+        "scores": {
+            "skills_match": {
+                "score": 2.6,
+                "semantic_similarity": 0.38265864265916594,
+                "justification": "The candidate has a strong background in programming languages (Python, Java, C/C++, Dart, JavaScript) and machine learning concepts (Machine Learning, Deep Learning, Neural Networks), which aligns moderately well with the job requirements. However, the candidate lacks specific skills in modern AI tools, frameworks, technology stacks, LLMs, generative AI platforms, and cloud infrastructure (AWS, Azure, GCP)."
+            },
+            "experience_relevance": {
+                "score": 2.3,
+                "semantic_similarity": 0.2926671438364541,
+                "justification": "The candidate's educational background in AI and ML is relevant, but it lacks specific experience in the areas required for the job, such as strategic AI planning, feature prototyping, live project execution, software integration, prompt engineering, model optimization, data preparation and validation, documentation, quality assurance, and governance. The high school score is not directly relevant to the job requirements."
+            },
+            "education_certs": {
+                "score": 0,
+                "justification": "Education and certifications evaluated."
+            },
+            "project_portfolio": {
+                "score": 3.5,
+                "semantic_similarity": 0.30178274428666485,
+                "justification": "The candidate demonstrated a strong understanding of AI and ML frameworks, particularly in the context of graph neural networks and deep learning architectures. However, the projects do not directly align with modern AI tools, frameworks, technology stacks, or generative AI platforms as required. The projects are innovative but lack direct relevance to the specified job requirements."
+            },
+            "communication_quality": {
+                "score": 6.0,
+                "justification": "The candidate provides a detailed technical background and a variety of projects, which shows a strong alignment with the job requirement. However, the resume lacks a clear and concise summary or objective statement, which is a common requirement for professional resumes and could be improved."
+            }
+        },
+        "weighted_total": 2.66,
+        "recommendation": "Reject",
+        "fit_label": "Weak Fit"
+    }
+]

@@ -8,8 +8,7 @@ venv/
 # Environment Variables
 .env
 
-# Outputs
-output/
+
 
 # Uploads
 uploads/

@@ -1,0 +1,810 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      @page {
+        size: A4;
+        margin: 24px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        color: #1f2937;
+        line-height: 1.5;
+        font-size: 13px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      .report-header {
+        border-bottom: 3px solid #2563eb;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+      }
+
+      .report-title {
+        font-size: 30px;
+        color: #111827;
+        margin-bottom: 10px;
+      }
+
+      .report-meta {
+        margin-top: 5px;
+        color: #4b5563;
+      }
+
+      .summary-grid {
+        display: flex;
+        gap: 20px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
+
+      .summary-card {
+        flex: 1;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 18px;
+      }
+
+      .summary-card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #111827;
+      }
+
+      .summary-value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+
+      .candidate-card {
+        border: 1px solid #dbe4ee;
+        border-radius: 14px;
+        padding: 22px;
+        margin-bottom: 35px;
+        page-break-inside: avoid;
+        background: #ffffff;
+      }
+
+      .candidate-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .candidate-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #111827;
+      }
+
+      .rank-badge {
+        background: #2563eb;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .score-section {
+        display: flex;
+        gap: 15px;
+        margin-top: 18px;
+        margin-bottom: 20px;
+      }
+
+      .score-card {
+        flex: 1;
+        background: #f9fafb;
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid #e5e7eb;
+      }
+
+      .score-label {
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 5px;
+      }
+
+      .score-value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+
+      .recommendation {
+        font-weight: bold;
+        color: #15803d;
+        font-size: 15px;
+      }
+
+      .fit-label {
+        color: #7c3aed;
+        font-weight: bold;
+      }
+
+      .section-title {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        color: #111827;
+        border-left: 5px solid #2563eb;
+        padding-left: 10px;
+      }
+
+      .skills-container {
+        margin-top: 10px;
+      }
+
+      .skill-chip {
+        display: inline-block;
+        background: #eff6ff;
+        color: #1d4ed8;
+        border-radius: 999px;
+        padding: 6px 12px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+
+      .missing-chip {
+        background: #fef2f2;
+        color: #b91c1c;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+      }
+
+      th,
+      td {
+        border: 1px solid #e5e7eb;
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      th {
+        background: #f3f4f6;
+        color: #111827;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #9ca3af;
+        font-size: 11px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="report-header">
+      <div class="report-title">AI Hiring Shortlist Report</div>
+
+      <div class="report-meta">
+        <strong>Role:</strong>
+        AI Enablement/ Integration Intern
+      </div>
+
+      <div class="report-meta">
+        <strong>Generated At:</strong>
+        2026-05-15 00:26
+      </div>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>Total Candidates</h3>
+
+        <div class="summary-value">3</div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Average Score</h3>
+
+        <div class="summary-value">3.23/10</div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Top Candidate</h3>
+
+        <div class="summary-value" style="font-size: 18px">
+          Tanish
+        </div>
+      </div>
+    </div>
+
+
+    <div class="candidate-card">
+      <div class="candidate-header">
+        <div>
+          <div class="candidate-name">Tanish</div>
+
+          <div style="margin-top: 5px; color: #6b7280">
+            
+          </div>
+        </div>
+
+        <div class="rank-badge">Rank #1</div>
+      </div>
+
+      <div class="score-section">
+        <div class="score-card">
+          <div class="score-label">Overall Score</div>
+
+          <div class="score-value">3.66/10</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Recommendation</div>
+
+          <div class="recommendation">Reject</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Fit Label</div>
+
+          <div class="fit-label">Weak Fit</div>
+        </div>
+      </div>
+
+      <div class="section-title">Top Skills</div>
+
+      <div class="skills-container">
+
+        <span class="skill-chip"> Supervised Learning </span>
+
+
+        <span class="skill-chip"> Deep Learning </span>
+
+
+        <span class="skill-chip"> Generative AI </span>
+
+
+        <span class="skill-chip"> Feature Engineering </span>
+
+
+        <span class="skill-chip"> Model Evaluation </span>
+
+
+        <span class="skill-chip"> Computer Vision </span>
+
+
+        <span class="skill-chip"> Image Preprocessing </span>
+
+
+        <span class="skill-chip"> YOLO </span>
+
+      </div>
+
+      <div class="section-title">Missing Skills</div>
+
+      <div class="skills-container">
+
+        <span class="skill-chip missing-chip"> modern AI tools </span>
+
+
+        <span class="skill-chip missing-chip"> frameworks </span>
+
+
+        <span class="skill-chip missing-chip"> technology stacks </span>
+
+
+        <span class="skill-chip missing-chip"> LLMs </span>
+
+
+        <span class="skill-chip missing-chip"> generative AI platforms </span>
+
+
+        <span class="skill-chip missing-chip"> AI/ML frameworks </span>
+
+
+        <span class="skill-chip missing-chip"> programming language - Python </span>
+
+
+        <span class="skill-chip missing-chip"> REST APIs </span>
+
+
+        <span class="skill-chip missing-chip"> software integration concepts </span>
+
+
+        <span class="skill-chip missing-chip"> databases </span>
+
+
+        <span class="skill-chip missing-chip"> data structures </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - AWS </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - Azure </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - GCP </span>
+
+      </div>
+
+      <div class="section-title">Rubric Breakdown</div>
+
+      <table>
+        <tr>
+          <th>Dimension</th>
+          <th>Score</th>
+          <th>Justification</th>
+        </tr>
+
+
+        <tr>
+          <td>skills_match</td>
+          <td>4.2</td>
+          <td>The candidate has a strong background in machine learning and deep learning, including supervised learning, deep learning, generative AI, and various algorithms. However, the candidate lacks specific skills in modern AI tools, frameworks, and technology stacks such as LLMs, generative AI platforms, and AI/ML frameworks like TensorFlow or PyTorch. Additionally, the candidate&#39;s knowledge of cloud infrastructure (AWS, Azure, GCP) is not mentioned, which is a significant gap in the required skills.</td>
+        </tr>
+
+
+        <tr>
+          <td>experience_relevance</td>
+          <td>3.2</td>
+          <td>The candidate has experience in some areas relevant to the job requirements, such as AI feature prototyping and live project execution. However, there are gaps in other critical areas like strategic AI planning, software integration support, prompt engineering, and data validation. The alignment is moderate due to the partial coverage of the job requirements.</td>
+        </tr>
+
+
+        <tr>
+          <td>education_certs</td>
+          <td>0</td>
+          <td>Education and certifications evaluated.</td>
+        </tr>
+
+
+        <tr>
+          <td>project_portfolio</td>
+          <td>5.0</td>
+          <td>The candidate&#39;s project portfolio demonstrates strong alignment with the job requirements, particularly in the areas of deep learning, generative AI, and cloud infrastructure. However, the projects do not fully cover all the specified technologies and frameworks, such as REST APIs and software integration concepts, which slightly reduces the score.</td>
+        </tr>
+
+
+        <tr>
+          <td>communication_quality</td>
+          <td>6.0</td>
+          <td>The candidate&#39;s resume provides a clear and structured overview of their education and projects, which is relevant to the job requirement. However, the communication quality could be improved with more concise and professional language, and a more polished format. The alignment is moderate due to the presence of informal elements like hashtags and symbols.</td>
+        </tr>
+
+      </table>
+
+      <div class="section-title">Strengths</div>
+
+      <ul>
+
+        <li>Strong background in machine learning and deep learning, including supervised learning, deep learning, generative AI, and various algorithms.</li>
+
+
+        <li>Demonstrated experience in developing and deploying AI models for real-world applications, such as 3D lung tumor detection, DDoS attack detection, and automatic license plate recognition.</li>
+
+
+        <li>Experience with multiple programming languages and tools, including Python, JavaScript, HTML/CSS, and various machine learning frameworks.</li>
+
+
+        <li>Projects showcase a good understanding of data preprocessing, model evaluation, and deployment, which are relevant to the job requirements.</li>
+
+      </ul>
+
+      <div class="section-title">Weaknesses</div>
+
+      <ul>
+
+        <li>Lacks specific skills in modern AI tools, frameworks, and technology stacks such as LLMs, generative AI platforms, and AI/ML frameworks like TensorFlow or PyTorch.</li>
+
+
+        <li>No experience in cloud infrastructure (AWS, Azure, GCP), which is a significant gap in the required skills.</li>
+
+
+        <li>Limited experience in strategic AI planning, software integration support, prompt engineering, and data validation, which are critical for the role.</li>
+
+
+        <li>Communication quality could be improved with more concise and professional language, and a more polished format.</li>
+
+      </ul>
+    </div>
+
+
+    <div class="candidate-card">
+      <div class="candidate-header">
+        <div>
+          <div class="candidate-name">Lokesh Mudgal</div>
+
+          <div style="margin-top: 5px; color: #6b7280">
+            AI &amp; Full Stack Developer
+          </div>
+        </div>
+
+        <div class="rank-badge">Rank #2</div>
+      </div>
+
+      <div class="score-section">
+        <div class="score-card">
+          <div class="score-label">Overall Score</div>
+
+          <div class="score-value">3.36/10</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Recommendation</div>
+
+          <div class="recommendation">Reject</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Fit Label</div>
+
+          <div class="fit-label">Weak Fit</div>
+        </div>
+      </div>
+
+      <div class="section-title">Top Skills</div>
+
+      <div class="skills-container">
+
+        <span class="skill-chip"> C++ </span>
+
+
+        <span class="skill-chip"> Python </span>
+
+
+        <span class="skill-chip"> JavaScript </span>
+
+
+        <span class="skill-chip"> SQL </span>
+
+
+        <span class="skill-chip"> Solidity </span>
+
+
+        <span class="skill-chip"> React.js </span>
+
+
+        <span class="skill-chip"> Redux </span>
+
+
+        <span class="skill-chip"> Node.js </span>
+
+      </div>
+
+      <div class="section-title">Missing Skills</div>
+
+      <div class="skills-container">
+
+        <span class="skill-chip missing-chip"> modern AI tools </span>
+
+
+        <span class="skill-chip missing-chip"> frameworks </span>
+
+
+        <span class="skill-chip missing-chip"> technology stacks </span>
+
+
+        <span class="skill-chip missing-chip"> LLMs </span>
+
+
+        <span class="skill-chip missing-chip"> generative AI platforms </span>
+
+
+        <span class="skill-chip missing-chip"> AI/ML frameworks </span>
+
+
+        <span class="skill-chip missing-chip"> programming language - Python </span>
+
+
+        <span class="skill-chip missing-chip"> REST APIs </span>
+
+
+        <span class="skill-chip missing-chip"> software integration concepts </span>
+
+
+        <span class="skill-chip missing-chip"> databases </span>
+
+
+        <span class="skill-chip missing-chip"> data structures </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - AWS </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - Azure </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - GCP </span>
+
+      </div>
+
+      <div class="section-title">Rubric Breakdown</div>
+
+      <table>
+        <tr>
+          <th>Dimension</th>
+          <th>Score</th>
+          <th>Justification</th>
+        </tr>
+
+
+        <tr>
+          <td>skills_match</td>
+          <td>2.6</td>
+          <td>The candidate has a moderate alignment with the job requirements. They have skills in Python, SQL, and some cloud infrastructure (AWS, Google Colab, Jupyter), which are relevant. However, they lack skills in modern AI tools, frameworks, and specific technologies like LLMs, generative AI platforms, and AI/ML frameworks mentioned in the job requirement.</td>
+        </tr>
+
+
+        <tr>
+          <td>experience_relevance</td>
+          <td>3.5</td>
+          <td>The candidate&#39;s experience in AI feature prototyping and live project execution is strong, particularly in the areas of deep learning, generative AI, and performance evaluation. However, the experience in software integration, prompt engineering, and data preparation is less directly aligned with the job requirements.</td>
+        </tr>
+
+
+        <tr>
+          <td>education_certs</td>
+          <td>0</td>
+          <td>Education and certifications evaluated.</td>
+        </tr>
+
+
+        <tr>
+          <td>project_portfolio</td>
+          <td>4.5</td>
+          <td>The candidate has demonstrated strong alignment with the project portfolio by showcasing experience in deep learning and generative AI for medical imaging. However, the other projects, while technically impressive, do not directly align with the specific requirements of modern AI tools, frameworks, and technology stacks in the context of AI/ML for medical applications.</td>
+        </tr>
+
+
+        <tr>
+          <td>communication_quality</td>
+          <td>8.0</td>
+          <td>The resume provides a clear and detailed summary of Lokesh Mudgal&#39;s professional background, skills, and achievements. It is well-organized and easy to read, making it suitable for a professional setting. However, it could be more concise and focused on the most relevant information for the position.</td>
+        </tr>
+
+      </table>
+
+      <div class="section-title">Strengths</div>
+
+      <ul>
+
+        <li>Strong experience in deep learning and generative AI, particularly in medical imaging and NFT marketplaces.</li>
+
+
+        <li>Demonstrated ability to implement complex AI solutions and perform model optimization.</li>
+
+
+        <li>Experience with cloud infrastructure tools like AWS, Google Colab, and Jupyter.</li>
+
+
+        <li>Clear and detailed resume with a strong focus on relevant skills and projects.</li>
+
+      </ul>
+
+      <div class="section-title">Weaknesses</div>
+
+      <ul>
+
+        <li>Lacks specific skills in modern AI tools, frameworks, and technology stacks like LLMs, generative AI platforms, and AI/ML frameworks.</li>
+
+
+        <li>Experience in software integration, prompt engineering, and data preparation is limited.</li>
+
+
+        <li>No formal education or certifications from a premier engineering institution in Computer Science, Information Technology, Artificial Intelligence, Machine Learning, or Software Engineering.</li>
+
+      </ul>
+    </div>
+
+
+    <div class="candidate-card">
+      <div class="candidate-header">
+        <div>
+          <div class="candidate-name">SWAMIL SUBODH</div>
+
+          <div style="margin-top: 5px; color: #6b7280">
+            Bachelor of Technology in Artificial Intelligence and Machine Learning at National Institute of Technology, Kurukshetra, India
+          </div>
+        </div>
+
+        <div class="rank-badge">Rank #3</div>
+      </div>
+
+      <div class="score-section">
+        <div class="score-card">
+          <div class="score-label">Overall Score</div>
+
+          <div class="score-value">2.66/10</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Recommendation</div>
+
+          <div class="recommendation">Reject</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Fit Label</div>
+
+          <div class="fit-label">Weak Fit</div>
+        </div>
+      </div>
+
+      <div class="section-title">Top Skills</div>
+
+      <div class="skills-container">
+
+        <span class="skill-chip"> Python </span>
+
+
+        <span class="skill-chip"> Java </span>
+
+
+        <span class="skill-chip"> C/C++ </span>
+
+
+        <span class="skill-chip"> Dart </span>
+
+
+        <span class="skill-chip"> JavaScript </span>
+
+
+        <span class="skill-chip"> HTML </span>
+
+
+        <span class="skill-chip"> CSS </span>
+
+
+        <span class="skill-chip"> Machine Learning </span>
+
+      </div>
+
+      <div class="section-title">Missing Skills</div>
+
+      <div class="skills-container">
+
+        <span class="skill-chip missing-chip"> modern AI tools </span>
+
+
+        <span class="skill-chip missing-chip"> frameworks </span>
+
+
+        <span class="skill-chip missing-chip"> technology stacks </span>
+
+
+        <span class="skill-chip missing-chip"> LLMs </span>
+
+
+        <span class="skill-chip missing-chip"> generative AI platforms </span>
+
+
+        <span class="skill-chip missing-chip"> AI/ML frameworks </span>
+
+
+        <span class="skill-chip missing-chip"> programming language - Python </span>
+
+
+        <span class="skill-chip missing-chip"> REST APIs </span>
+
+
+        <span class="skill-chip missing-chip"> software integration concepts </span>
+
+
+        <span class="skill-chip missing-chip"> databases </span>
+
+
+        <span class="skill-chip missing-chip"> data structures </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - AWS </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - Azure </span>
+
+
+        <span class="skill-chip missing-chip"> cloud infrastructure - GCP </span>
+
+      </div>
+
+      <div class="section-title">Rubric Breakdown</div>
+
+      <table>
+        <tr>
+          <th>Dimension</th>
+          <th>Score</th>
+          <th>Justification</th>
+        </tr>
+
+
+        <tr>
+          <td>skills_match</td>
+          <td>2.6</td>
+          <td>The candidate has a strong background in programming languages (Python, Java, C/C++, Dart, JavaScript) and machine learning concepts (Machine Learning, Deep Learning, Neural Networks), which aligns moderately well with the job requirements. However, the candidate lacks specific skills in modern AI tools, frameworks, technology stacks, LLMs, generative AI platforms, and cloud infrastructure (AWS, Azure, GCP).</td>
+        </tr>
+
+
+        <tr>
+          <td>experience_relevance</td>
+          <td>2.3</td>
+          <td>The candidate&#39;s educational background in AI and ML is relevant, but it lacks specific experience in the areas required for the job, such as strategic AI planning, feature prototyping, live project execution, software integration, prompt engineering, model optimization, data preparation and validation, documentation, quality assurance, and governance. The high school score is not directly relevant to the job requirements.</td>
+        </tr>
+
+
+        <tr>
+          <td>education_certs</td>
+          <td>0</td>
+          <td>Education and certifications evaluated.</td>
+        </tr>
+
+
+        <tr>
+          <td>project_portfolio</td>
+          <td>3.5</td>
+          <td>The candidate demonstrated a strong understanding of AI and ML frameworks, particularly in the context of graph neural networks and deep learning architectures. However, the projects do not directly align with modern AI tools, frameworks, technology stacks, or generative AI platforms as required. The projects are innovative but lack direct relevance to the specified job requirements.</td>
+        </tr>
+
+
+        <tr>
+          <td>communication_quality</td>
+          <td>6.0</td>
+          <td>The candidate provides a detailed technical background and a variety of projects, which shows a strong alignment with the job requirement. However, the resume lacks a clear and concise summary or objective statement, which is a common requirement for professional resumes and could be improved.</td>
+        </tr>
+
+      </table>
+
+      <div class="section-title">Strengths</div>
+
+      <ul>
+
+        <li>Strong background in programming languages (Python, Java, C/C++, Dart, JavaScript) and machine learning concepts (Machine Learning, Deep Learning, Neural Networks)</li>
+
+
+        <li>Demonstrated experience in developing AI and ML projects, including a hybrid graph neural network for Ethereum phishing scam detection and a smart voice-enabled assistant</li>
+
+
+        <li>Highly motivated and self-driven, as evidenced by the development of a weekly tech digest newsletter and involvement in Model United Nations (MUN) events</li>
+
+      </ul>
+
+      <div class="section-title">Weaknesses</div>
+
+      <ul>
+
+        <li>Lacks specific skills in modern AI tools, frameworks, technology stacks, LLMs, generative AI platforms, and cloud infrastructure (AWS, Azure, GCP)</li>
+
+
+        <li>Limited experience in strategic AI planning, feature prototyping, live project execution, software integration, prompt engineering, model optimization, data preparation and validation, documentation, quality assurance, and governance</li>
+
+
+        <li>Projects do not directly align with the specific requirements of the job, such as working with modern AI tools and frameworks</li>
+
+      </ul>
+    </div>
+
+
+    <div class="footer">
+      Generated by AI Resume & Hiring Intelligence System
+    </div>
+  </body>
+</html>
