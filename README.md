@@ -3,6 +3,10 @@
 AI-Powered Hybrid Resume Screening & Candidate Ranking System
 
 ---
+# Demo Video Link
+https://youtu.be/FajVAzzGipY
+
+---
 
 # Overview
 
