@@ -1,12 +1,12 @@
-from groq import Groq
 import os
 
 from dotenv import load_dotenv
+from huggingface_hub import InferenceClient
 
 load_dotenv()
 
-client = Groq(
-    api_key=os.getenv(
-        "GROQ_API_KEY"
-    )
+MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
+
+llm_client = InferenceClient(
+    token=os.getenv("HUGGINGFACEHUB_API_TOKEN")
 )

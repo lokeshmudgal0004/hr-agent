@@ -1,3 +1,4 @@
+import os
 import json
 
 from reports.report_builder import (
@@ -32,35 +33,69 @@ def generate_full_report(
 
         candidate["missing_skills"] = (
             find_missing_skills(
-                jd["required_skills"],
-                candidate["candidate_skills"]
+                jd.get(
+                    "required_skills",
+                    []
+                ),
+                candidate.get(
+                    "candidate_skills",
+                    []
+                )
             )
         )
 
-        summary = generate_summary(
-            jd,
-            candidate
-        )
+        try:
 
-        candidate["strengths"] = (
-            summary["strengths"]
-        )
+            summary = generate_summary(
+                jd,
+                candidate
+            )
 
-        candidate["weaknesses"] = (
-            summary["weaknesses"]
-        )
+            candidate["strengths"] = (
+                summary.get(
+                    "strengths",
+                    []
+                )
+            )
+
+            candidate["weaknesses"] = (
+                summary.get(
+                    "weaknesses",
+                    []
+                )
+            )
+
+        except Exception as error:
+
+            print(
+                f"Summary generation failed for "
+                f"{candidate.get('candidate_name')}: "
+                f"{error}"
+            )
+
+            candidate["strengths"] = []
+
+            candidate["weaknesses"] = []
 
         enriched_candidates.append(
             candidate
         )
 
     report_data = build_report(
-        jd["role"],
+        jd.get(
+            "role",
+            "Unknown Role"
+        ),
         enriched_candidates
     )
 
     html_content = generate_html_report(
         report_data
+    )
+
+    os.makedirs(
+        "output",
+        exist_ok=True
     )
 
     with open(
@@ -69,7 +104,9 @@ def generate_full_report(
         encoding="utf-8"
     ) as file:
 
-        file.write(html_content)
+        file.write(
+            html_content
+        )
 
     generate_pdf_report(
         html_content,
@@ -78,13 +115,19 @@ def generate_full_report(
 
     with open(
         "output/report.json",
-        "w"
+        "w",
+        encoding="utf-8"
     ) as file:
 
         json.dump(
             report_data,
             file,
-            indent=4
+            indent=4,
+            ensure_ascii=False
         )
+
+    print(
+        "Report generation completed successfully."
+    )
 
     return report_data

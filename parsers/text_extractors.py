@@ -1,21 +1,20 @@
-import fitz
+from langchain_community.document_loaders import PyMuPDFLoader
+import fitz 
 from docx import Document
 
 
 def extract_text_from_pdf(file_path):
-    text = ""
+    loader = PyMuPDFLoader(file_path)
 
-    doc = fitz.open(file_path)
+    documents = loader.load()
 
-    for page in doc:
-        text += page.get_text()
+    text = "\n".join([doc.page_content for doc in documents])
 
     return text
 
 
-def extract_text_from_docx(file_path):
-    doc = Document(file_path)
-
-    text = "\n".join([para.text for para in doc.paragraphs])
-
+def extract_text_from_docx(file_path): 
+    doc = Document(file_path) 
+    text = "\n".join([para.text for para in doc.paragraphs]) 
+    
     return text

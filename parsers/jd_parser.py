@@ -6,39 +6,74 @@ from utils.json_cleaner import (
     clean_llm_json
 )
 
-from llm_client import client
+from llm_client import llm_client
+
 
 def parse_jd(jd_text):
 
     prompt = f"""
-    You are an expert HR recruiter.
+You are an expert HR recruiter and information extraction system.
 
-    Extract structured information from the following job description.
+Your task is to extract structured hiring requirements from the given Job Description.
 
-    Return ONLY valid JSON.
-    Example:
-    {{
-        "score": 8,
-        "reason": "Strong alignment"
-    }}
+Return ONLY valid JSON.
 
-    Job Description:
-    {jd_text}
-    """
+The JSON MUST strictly follow this structure:
 
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+{{
+    "role": "string",
+
+    "required_skills": ["skill1", "skill2"],
+
+    "preferred_skills": ["skill1", "skill2"],
+
+    "minimum_experience": "string",
+
+    "education_requirements": ["education1", "education2"],
+
+    "certifications": ["cert1", "cert2"],
+
+    "responsibilities": ["responsibility1", "responsibility2"],
+
+    "tools_and_technologies": ["tool1", "tool2"],
+
+    "soft_skills": ["skill1", "skill2"],
+
+    "domain": "string",
+
+    "seniority_level": "string"
+}}
+
+Rules:
+- Return ONLY JSON.
+- Do not include markdown.
+- Do not include explanations.
+- Use empty strings or empty arrays if information is missing.
+- Extract concise and clean values.
+- Avoid duplicate entries.
+- Skills should be short phrases only.
+
+Job Description:
+{jd_text}
+"""
+
+    response = llm_client.chat.completions.create(
+        model="Qwen/Qwen2.5-7B-Instruct",
         messages=[
             {
                 "role": "system",
-                "content": "You extract structured hiring requirements."
+                "content": (
+                    "You are a highly accurate HR information extraction assistant "
+                    "that converts job descriptions into structured JSON."
+                )
             },
             {
                 "role": "user",
                 "content": prompt
             }
         ],
-        response_format={"type":"json_object"}
+        temperature=0.1,
+        max_tokens=1200
     )
 
     content = response.choices[0].message.content
@@ -51,4 +86,4 @@ def parse_jd(jd_text):
         **parsed_json
     )
 
-    return validated.dict()
+    return validated.model_dump()

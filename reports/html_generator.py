@@ -1,5 +1,8 @@
-from jinja2 import Environment
-from jinja2 import FileSystemLoader
+from jinja2 import (
+    Environment,
+    FileSystemLoader,
+    select_autoescape
+)
 
 import os
 
@@ -13,13 +16,23 @@ TEMPLATE_DIR = os.path.join(
 def generate_html_report(data):
 
     env = Environment(
-        loader=FileSystemLoader(TEMPLATE_DIR)
+        loader=FileSystemLoader(TEMPLATE_DIR),
+
+        autoescape=select_autoescape(
+            ["html", "xml"]
+        ),
+
+        trim_blocks=True,
+
+        lstrip_blocks=True
     )
 
     template = env.get_template(
         "report_template.html"
     )
 
-    html_content = template.render(data)
+    html_content = template.render(
+        report=data
+    )
 
     return html_content

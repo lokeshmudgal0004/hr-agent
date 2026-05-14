@@ -1,84 +1,299 @@
 <!doctype html>
+
 <html>
   <head>
     <meta charset="UTF-8" />
 
     <style>
+      @page {
+        size: A4;
+        margin: 24px;
+      }
+
       body {
         font-family: Arial, sans-serif;
-        padding: 30px;
-        color: #222;
+        color: #1f2937;
+        line-height: 1.5;
+        font-size: 13px;
       }
 
-      h1 {
-        color: #0f172a;
+      h1,
+      h2,
+      h3 {
+        margin: 0;
       }
 
-      h2 {
-        margin-top: 30px;
-        color: #1e293b;
-      }
-
-      .candidate-card {
-        border: 1px solid #d1d5db;
-        border-radius: 10px;
-        padding: 20px;
+      .report-header {
+        border-bottom: 3px solid #2563eb;
+        padding-bottom: 15px;
         margin-bottom: 30px;
       }
 
-      .score {
-        font-size: 18px;
+      .report-title {
+        font-size: 30px;
+        color: #111827;
+        margin-bottom: 10px;
+      }
+
+      .report-meta {
+        margin-top: 5px;
+        color: #4b5563;
+      }
+
+      .summary-grid {
+        display: flex;
+        gap: 20px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
+
+      .summary-card {
+        flex: 1;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 18px;
+      }
+
+      .summary-card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #111827;
+      }
+
+      .summary-value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+
+      .candidate-card {
+        border: 1px solid #dbe4ee;
+        border-radius: 14px;
+        padding: 22px;
+        margin-bottom: 35px;
+        page-break-inside: avoid;
+        background: #ffffff;
+      }
+
+      .candidate-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .candidate-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #111827;
+      }
+
+      .rank-badge {
+        background: #2563eb;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .score-section {
+        display: flex;
+        gap: 15px;
+        margin-top: 18px;
+        margin-bottom: 20px;
+      }
+
+      .score-card {
+        flex: 1;
+        background: #f9fafb;
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid #e5e7eb;
+      }
+
+      .score-label {
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 5px;
+      }
+
+      .score-value {
+        font-size: 24px;
         font-weight: bold;
         color: #2563eb;
       }
 
       .recommendation {
         font-weight: bold;
-        color: green;
+        color: #15803d;
+        font-size: 15px;
+      }
+
+      .fit-label {
+        color: #7c3aed;
+        font-weight: bold;
+      }
+
+      .section-title {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        color: #111827;
+        border-left: 5px solid #2563eb;
+        padding-left: 10px;
+      }
+
+      .skills-container {
+        margin-top: 10px;
+      }
+
+      .skill-chip {
+        display: inline-block;
+        background: #eff6ff;
+        color: #1d4ed8;
+        border-radius: 999px;
+        padding: 6px 12px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+
+      .missing-chip {
+        background: #fef2f2;
+        color: #b91c1c;
       }
 
       table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 15px;
+        margin-top: 12px;
       }
 
       th,
       td {
-        border: 1px solid #d1d5db;
+        border: 1px solid #e5e7eb;
         padding: 10px;
-        text-align: left;
+        vertical-align: top;
       }
 
       th {
         background: #f3f4f6;
+        color: #111827;
       }
 
       ul {
-        margin-top: 5px;
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #9ca3af;
+        font-size: 11px;
       }
     </style>
   </head>
 
   <body>
-    <h1>AI Hiring Shortlist Report</h1>
+    <div class="report-header">
+      <div class="report-title">AI Hiring Shortlist Report</div>
 
-    <p><strong>Role:</strong> {{ role }}</p>
+      <div class="report-meta">
+        <strong>Role:</strong>
+        {{ report.role }}
+      </div>
 
-    <p><strong>Generated At:</strong> {{ generated_at }}</p>
+      <div class="report-meta">
+        <strong>Generated At:</strong>
+        {{ report.generated_at }}
+      </div>
+    </div>
 
-    {% for candidate in candidates %}
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>Total Candidates</h3>
+
+        <div class="summary-value">{{ report.total_candidates }}</div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Average Score</h3>
+
+        <div class="summary-value">{{ report.average_score }}/10</div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Top Candidate</h3>
+
+        <div class="summary-value" style="font-size: 18px">
+          {{ report.top_candidate.candidate_name }}
+        </div>
+      </div>
+    </div>
+
+    {% for candidate in report.candidates %}
 
     <div class="candidate-card">
-      <h2>Rank #{{ loop.index }} — {{ candidate.candidate_name }}</h2>
+      <div class="candidate-header">
+        <div>
+          <div class="candidate-name">{{ candidate.candidate_name }}</div>
 
-      <p class="score">Weighted Score: {{ candidate.weighted_total }}/10</p>
+          <div style="margin-top: 5px; color: #6b7280">
+            {{ candidate.current_role }}
+          </div>
+        </div>
 
-      <p class="recommendation">
-        Recommendation: {{ candidate.recommendation }}
-      </p>
+        <div class="rank-badge">Rank #{{ candidate.rank }}</div>
+      </div>
 
-      <h3>Rubric Breakdown</h3>
+      <div class="score-section">
+        <div class="score-card">
+          <div class="score-label">Overall Score</div>
+
+          <div class="score-value">{{ candidate.weighted_total }}/10</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Recommendation</div>
+
+          <div class="recommendation">{{ candidate.recommendation }}</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Fit Label</div>
+
+          <div class="fit-label">{{ candidate.fit_label }}</div>
+        </div>
+      </div>
+
+      <div class="section-title">Top Skills</div>
+
+      <div class="skills-container">
+        {% for skill in candidate.top_skills %}
+
+        <span class="skill-chip"> {{ skill }} </span>
+
+        {% endfor %}
+      </div>
+
+      <div class="section-title">Missing Skills</div>
+
+      <div class="skills-container">
+        {% for skill in candidate.missing_skills %}
+
+        <span class="skill-chip missing-chip"> {{ skill }} </span>
+
+        {% endfor %}
+      </div>
+
+      <div class="section-title">Rubric Breakdown</div>
 
       <table>
         <tr>
@@ -98,17 +313,7 @@
         {% endfor %}
       </table>
 
-      <h3>Missing Skills</h3>
-
-      <ul>
-        {% for skill in candidate.missing_skills %}
-
-        <li>{{ skill }}</li>
-
-        {% endfor %}
-      </ul>
-
-      <h3>Strengths</h3>
+      <div class="section-title">Strengths</div>
 
       <ul>
         {% for strength in candidate.strengths %}
@@ -118,7 +323,7 @@
         {% endfor %}
       </ul>
 
-      <h3>Weaknesses</h3>
+      <div class="section-title">Weaknesses</div>
 
       <ul>
         {% for weakness in candidate.weaknesses %}
@@ -130,5 +335,9 @@
     </div>
 
     {% endfor %}
+
+    <div class="footer">
+      Generated by AI Resume & Hiring Intelligence System
+    </div>
   </body>
 </html>

@@ -1,6 +1,14 @@
 import json
 
-from llm_client import client
+from llm_client import llm_client
+
+from utils.json_cleaner import (
+    clean_llm_json
+)
+
+from schemas.score_schema import (
+    RubricDimension
+)
 
 
 def evaluate_dimension(
@@ -10,42 +18,70 @@ def evaluate_dimension(
 ):
 
     prompt = f"""
-    You are an expert HR evaluator.
+You are an expert HR evaluator and hiring assessment system.
 
-    Evaluate ONLY the following dimension:
+Your task is to evaluate ONLY ONE hiring dimension.
 
-    {dimension}
+Dimension to Evaluate:
+{dimension}
 
-    JOB REQUIREMENT:
-    {jd_context}
+Job Requirement:
+{jd_context}
 
-    CANDIDATE INFORMATION:
-    {candidate_context}
+Candidate Information:
+{candidate_context}
 
-    Return STRICT JSON:
+Evaluation Instructions:
+- Be strict and objective.
+- Compare relevance, depth, and alignment.
+- Give realistic scores.
+- Do not inflate scores.
+- Consider missing requirements negatively.
 
-    {{
-        "score": number between 0 and 10,
-        "justification": "short explanation"
-    }}
-    """
+Scoring Guidelines:
+- 0-2  -> Very poor alignment
+- 3-4  -> Weak alignment
+- 5-6  -> Moderate alignment
+- 7-8  -> Strong alignment
+- 9-10 -> Exceptional alignment
 
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        temperature=0,
+Return ONLY valid JSON.
+
+Required JSON format:
+
+{{
+    "score": 0,
+    "justification": "short concise explanation"
+}}
+"""
+
+    response = llm_client.chat.completions.create(
+        model="Qwen/Qwen2.5-7B-Instruct",
         messages=[
             {
                 "role": "system",
-                "content": "You are a strict hiring evaluator."
+                "content": (
+                    "You are a strict and accurate hiring evaluator "
+                    "that scores candidates objectively."
+                )
             },
             {
                 "role": "user",
                 "content": prompt
             }
         ],
-        response_format={"type": "json_object"}
+        temperature=0.1,
+        max_tokens=300
     )
 
-    return json.loads(
-        response.choices[0].message.content
+    content = response.choices[0].message.content
+
+    parsed_json = clean_llm_json(
+        content
     )
+
+    validated = RubricDimension(
+        **parsed_json
+    )
+
+    return validated.model_dump()
