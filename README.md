@@ -3,6 +3,9 @@
 AI-Powered Hybrid Resume Screening & Candidate Ranking System
 
 ---
+# Website Screenshot
+<img width="2507" height="1041" alt="image" src="https://github.com/user-attachments/assets/8cc57a3b-af43-4a1d-a5b2-121bd588028c" />
+
 # Demo Video Link
 
 https://youtu.be/FajVAzzGipY
@@ -10,7 +13,7 @@ https://youtu.be/FajVAzzGipY
 ---
 
 # Important Note
-I initially <b>"llama-3.3-70b-versatile (Groq)"<b> model for llm parsing and llm scoring....but it was not giving satisfactory results so i changed the model and am currently using the <b>"Qwen/Qwen2.5-7B-Instruct"<b> Since I couldn't update the final documentation of the model after submission, so it's worth noting down.
+I initially *"llama-3.3-70b-versatile (Groq)"* model for llm parsing and llm scoring....but it was not giving satisfactory results so i changed the model and am currently using the *"Qwen/Qwen2.5-7B-Instruct"* Since I couldn't update the final documentation of the model after submission, so consider that.
 
 # Final Report Screenshots
 <img width="1112" height="1261" alt="Screenshot 2026-05-15 022530" src="https://github.com/user-attachments/assets/2c46790c-bf9e-490d-811b-f978afee30be" />
