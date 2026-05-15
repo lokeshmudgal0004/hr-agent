@@ -16,8 +16,8 @@ https://youtu.be/FajVAzzGipY
 I initially *"llama-3.3-70b-versatile (Groq)"* model for llm parsing and llm scoring....but it was not giving satisfactory results so i changed the model and am currently using the *"Qwen/Qwen2.5-7B-Instruct"* Since I couldn't update the final documentation of the model after submission, so consider that.
 
 # Final Report Screenshots
-<img width="1112" height="1261" alt="Screenshot 2026-05-15 022530" src="https://github.com/user-attachments/assets/2c46790c-bf9e-490d-811b-f978afee30be" />
-<img width="1142" height="1063" alt="Screenshot 2026-05-15 022544" src="https://github.com/user-attachments/assets/c5860be0-3bdc-48dd-b4af-62c55393238e" />
+<img width="2372" height="5341" alt="image" src="https://github.com/user-attachments/assets/6da70667-7bbf-4d83-a066-a5ba3aa9b70d" />
+
 
 Or the output section of the repository can be visited to see the final results in detail
 
@@ -171,13 +171,13 @@ sentence-transformers/all-MiniLM-L6-v2
 ## Model
 
 ```python
-llama-3.3-70b-versatile
+Qwen/Qwen2.5-7B-Instruct
 ```
 
 Provider:
 
 ```text
-Groq API
+HuggingFaceHub
 ```
 
 ## Why this model?
